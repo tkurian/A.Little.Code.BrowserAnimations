@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3c.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
+
+<!-- START HTML -->
+<html>
+
+	<!-- START HEAD -->
+	<head>
+
+		<!-- Adding title, meta, link to css and scripts to javascript files -->
+		<title>1.25</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link rel="stylesheet" type="text/css" href="css/27.css" />
+	
+	<!-- END HEAD -->
+	</head>
+
+	<!-- START BODY -->
+	<body >
+		<div class= "myGrass" id="myGrass">
+			<div class="grass" id="grass"></div>
+		</div>
+		<div class="myTree" id="myTree">
+			<div class="tree" id="tree"></div>
+		</div>
+		<div class="mySnail" id="mySnail">
+			<div class="snail" id="snail"></div>
+		</div>
+		<a onMouseOver="swapImage('box','openBox')" ><img src="imgs/boxclosed1.png" class = "animated_box bounceInDown" name="box" onclick="aniheart()"></a>
+		<a id="whiteboard" class="whiteboard" ><img src="imgs/whiteboard2.png" alt =""  id= "whiteboard" onclick="aniplane()"/></a>
+		<a id="heart" class="heart" ><img src="imgs/heart1.png" alt =""  id= "heart"/></a>
+		<a id="plane" class="plane" ><img src="imgs/plane.png" alt =""  id= "plane" /></a>
+		<a id="balloons" class="balloons" ><img src="imgs/balloons2.png" alt ="" onclick="aniballoons()" id= "balloons" onmouseover= "aniwhiteboard()"/></a>
+
+		
+		
+		<!-- ********************************************************************** -->
+		<!-- ***************************** JAVASCRIPT ***************************** -->
+		<!-- ********************************************************************** -->
+		
+		<script type="text/javascript">
+			if (document.images) 
+			{
+				closedBox = new Image;
+				openBox = new Image;
+
+				closedBox.src = "imgs/boxclosed1.png";
+				openBox.src = "imgs/boxopen1.png";
+			}
+			function swapImage(thisImage,newImage) 
+			{
+				if (document.images) 
+				{
+					document[thisImage].src = eval(newImage + ".src");
+				}
+			}
+		</script>	
+
+		<script type="text/javascript">
+			function aniplane()
+			{
+				document.getElementById('plane').className ='animated_plane fadeInLeft';
+			}
+			function aniheart()
+			{
+				document.getElementById('heart').className ='animated_heart fadeInUp';
+			}
+			function aniwhiteboard()
+			{
+				document.getElementById('whiteboard').className ='animated_whiteboard bounceInRight';
+			}
+			function aniballoons()
+			{
+				document.getElementById('balloons').className ='animated_balloons wiggle';
+			}
+		</script>
+		
+	<!-- END BODY -->
+	</body>
+
+<!-- END HTML -->
+</html>
